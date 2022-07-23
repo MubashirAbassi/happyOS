@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/need-style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/55d44e523a.js" crossorigin="anonymous"></script>
+
+    <style>
+        .img {
+
+            margin-top: 40px;
+            margin-left: 40px;
+
+        }
+
+        img {
+            width: 120px;
+        }
+
+        .header {
+            font-family: sans-serif;
+            color: darkgray;
+            /* float: right; */
+            margin-top: 30px;
+            /* margin-right: 50px; */
+            font-size: 28px;
+
+        }
+
+        h2 {
+            text-align: center;
+            font-family: sans-serif;
+            color: darkgray;
+            padding-top: 60px;
+
+
+        }
+
+        #abc {
+            margin-top: 50px;
+            width: 15%;
+            margin-left: 70px;
+            font-weight: 700;
+            color: lightgray;
+
+        }
+
+        #abcc {
+            margin-top: -38px;
+            width: 17%;
+            margin-left: 300px;
+            font-weight: 700;
+            color: lightgray;
+
+        }
+
+        .btn {
+            width: 25%;
+            margin-top: 150px;
+            border-radius: 40px;
+            font-size: 12px;
+            height: 40px;
+
+        }
+
+        #button {
+            text-align: center;
+
+            font-family: sans-serif;
+        }
+
+        .form-select,
+        .form-select:focus {
+            border: 1px solid #e2e2ea;
+            outline: 0;
+            /* I have also tried outline:none */
+            -webkit-appearance: none;
+            box-shadow: none;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+        }
+
+        .form-select:focus {
+            border: 1px solid #18b4ee;
+        }
+
+        select option.stripe:nth-of-type(2n) {
+            background: #ededed;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+             <div class="col-12">
+                    <div class="row mt-4 justify-content-between">
+                        <div class="col-2 head-img">
+                            <img src="./images/logo.png" alt="img" class="img-fluid">
+                        </div>
+                        <div class="col-2 head-content">
+                            <div class="row">
+                                <div class="col-10">
+                                    <h3>Welcome {{name}}</h3>
+                                </div>
+                                <div class="col-2 welcome-opt">
+                                    <button class="wel-button" onclick="showDrop()"><i class="bi bi-gear"></i></button>   
+                                </div>
+                                <div class=" col-12 welcome-drop" id="wel-drop">
+                                    <ul>
+                                        <a href="#" class="drop-anc">Profile</a>
+                                        <a href="/forgotpassword1" class="drop-anc-2">Forget Password</a>
+                                        <a href="/logout" class="drop-anc-3">Logout</a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+    <h2><b>View & Download Policies</b></h2>
+
+
+    <select class="form-select" aria-label="Default select example" id="abc">
+
+        <option class="stripe" selected id="abc">Select Program</option>
+        <option value="HR Employee Mgmt">HR Employee Mgmt</option>
+        <option value="Training Career Mgmt">Training Career Mgmt</option>
+        <option value="Corporate Standards">Corporate Standards</option>
+        <option value="Claint Rights">Claint Rights</option>
+        <option value="Claint Management">Claint Management</option>
+        <option value="Service Options">Service Options</option>
+        <option value="Miscellaneus">Miscellaneus</option>
+
+
+    </select>
+    <select class="form-select" aria-label="Default select example" id="abcc">
+
+        <option selected id="abcc">Select Policy Category</option>
+        <option value="ACT">ACT</option>
+        <option value="ARMHS">ARMHS</option>
+        <option value="MCT">MCT</option>
+        <option value="CTSS">CTSS</option>
+        <option value="ITFC">ITFC</option>
+        <option value="IRMHS">IRMHS</option>
+        <option value="IRTS">IRTS</option>
+        <option value="RCH">RCH</option>
+        <option value="MHC">MHC</option>
+        <option value="ADT">ADT</option>
+        <option value="PHP">PHP</option>
+    </select>
+    <p id="button">
+        <a href="/billing" class="btn text-white" style="background-color:#18b4ee; padding-top:10px;">YOU NEEdD TO BUY A SUBSCRIPTION</a>
+    </p>
+
+
+
+
+    </div>
+<script>
+    function showDrop() {
+    var x = document.getElementById("wel-drop");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+</script>
+
+</body>
+
+</html>

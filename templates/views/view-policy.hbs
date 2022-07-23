@@ -1,0 +1,148 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/view-policy-style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+
+    <title>View Policy</title>
+</head>
+
+<body onload="GetSelectedprogram('true'); GetSelectedcategory(this);">
+
+    <div id="onlinejson"></div>
+
+    <div class="view">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row mt-4 justify-content-between">
+                        <div class="col-2 head-img">
+                            <img src="./images/logo.png" alt="img" class="img-fluid">
+                        </div>
+                        <div class="col-3 head-content">
+                            <div class="row">
+                                <div class="col-10">
+                                    <h3 class="acaa">Welcome {{user_name}}</h3>
+                                </div>
+                                <div class="col-2 opt-divv">
+                                    <button class="wel-button" onclick="showDrop()"><i class="bi bi-gear"></i></button>
+                                </div>
+                                <div class=" col-12 welcome-drop" id="wel-drop">
+                                    <ul>
+                                        <a href="#" class="drop-anc">Profile</a>
+                                        <a href="/forgotpassword1" class="drop-anc-2">Forget Password</a>
+                                        <a href="/logout" class="drop-anc-3">Logout</a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center mt-3">
+                <div class="col-12">
+                    <h2>View and Download Policies</h2>
+                    {{#if success_msg}}
+                    <h5 style="color: green;">{{success_msg}}</h5>
+                    {{/if}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="row justify-content-center mt-3">
+
+                        <div class="col-5 left-div">
+                            <div class="row mt-3">
+                                <div class="col-3">
+                                    <select id="programs" onchange="GetSelectedprogram('false')" class="menu">
+                                        <!-- <option  value="">Select Program</option> -->
+                                        <option value="HR Employee Mgmt">HR Employee Mgmt</option>
+                                        <option value="Training Career Mgmt">Training Career Mgmt</option>
+                                        <option value="Corporate Standards">Corporate Standards</option>
+                                        <option value="Claint Rights">Claint Rights</option>
+                                        <option value="Claint Management">Claint Management</option>
+                                        <option value="Service Options">Service Options</option>
+                                        <option value="Miscellaneus">Miscellaneus</option>
+                                    </select>
+                                </div>
+                                <div class="col-7 menu-2-div">
+                                    <select id="categories" onchange="GetSelectedcategory(this);" class="menu-2">
+                                        <!-- <option  value="">Select Category</option> -->
+                                        <option value="ACT">ACT</option>
+                                        <option value="ARMHS">ARMHS</option>
+                                        <option value="MCT">MCT</option>
+                                        <option value="CTSS">CTSS</option>
+                                        <option value="ITFC">ITFC</option>
+                                        <option value="IRMHS">IRMHS</option>
+                                        <option value="IRTS">IRTS</option>
+                                        <option value="RCH">RCH</option>
+                                        <option value="MHC">MHC</option>
+                                        <option value="ADT">ADT</option>
+                                        <option value="PHP">PHP</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="addp" class="row mt-4 download-div">
+                                <div class="col-12 mb-3">
+                                    <h3 class="pol">Policies</h3>
+                                </div>
+                                <div id="policies">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="addstat" class="col-5 mt-5 pt-2 right-div">
+                            <h3>Related Statutes</h3>
+                            <div id="statuesFront"></div>
+
+                        </div>
+
+                        <div class="col-12">
+                            <div class="row mt-5">
+                                <div class="col-6 text-end">
+                                    <button class="my-btn">View PDF</button>
+                                </div>
+                                <div class="col-6">
+                                    <button class="my-btn">Download PDF</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+
+    </script>
+
+
+
+
+    <script src="./js/show_policies.js"></script>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
